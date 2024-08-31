@@ -1,0 +1,104 @@
+﻿*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+}
+.container{
+    flex: none; 
+    width: 50%; 
+    /* min-height: 100vh;  */
+    background: #fff; 
+    max-width: 600px;
+    margin: 30px; 
+    padding: 20px; 
+    border-radius: 50px;
+}
+.to-do-app{
+    width:100%; 
+    line-height: 30px;
+}
+.to-do-app h1{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    margin: 10px; 
+    padding: 10px 15px 15px;
+}
+.to-do-app img{
+    flex:none; 
+    width: 34px; 
+    margin-left: 10px; 
+    text-align: center;
+}
+.input-box{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: #edeef0;
+    border-radius: 30px; 
+    padding-left: 20px; 
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    background: transparent; 
+    padding: 10px; 
+    user-select: none;
+    border: none; 
+    font-size: 16px;
+    outline: none; 
+}
+button{
+    border-radius: 40px; 
+    background: coral;
+    color: white; 
+    font-size: 16px; 
+    padding:15px 30px;
+    border: none; 
+    cursor: pointer; 
+    outline: none
+}
+.list{
+    margin: 10px; 
+    padding: 5px 8px 10px 10px;
+}
+
+ul li{
+    list-style: none;
+    cursor: pointer; 
+    position: relative;
+    padding: 10px 5px 8px 40px;
+    user-select: none; 
+}
+ul li::before{    
+    content:'';    
+    position: absolute; top: 9px; left: 5px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+}
+ul li.check{
+    color: rgb(173, 169, 169);
+    text-decoration: line-through;
+}
+ul li.check::before{
+    background-image: url(check.png);
+}
+span{
+    float: right; border-radius: 50px;
+    width: 30px; height: 30px;
+    text-align: center; color: black;
+}
+span:hover{
+    background: #d8d8da;
+}
+/* CSS: flex: 1 代表什麼呢？
+min-height: 100vh; */
